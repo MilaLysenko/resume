@@ -5,9 +5,8 @@
     "npm": "4.2.x"
   },
   "description": "resume",
-  "main": "index.html",
+  "main": "index.js",
   "dependencies": {
-    "cool-ascii-faces": "1.3.4",
     "ejs": "2.5.6",
     "express": "4.15.2",
     "bower": "*",
@@ -17,7 +16,8 @@
     "gulp-load-plugins": "^1.5.0"
   },
   "scripts": {
-    "start": "node index.html"
+    "start": "node index.js",
+    "postinstall": "bower install"
   },
   "author": "Mila",
   "license": "ISC",
