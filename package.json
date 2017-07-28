@@ -1,6 +1,9 @@
 {
   "name": "resume",
   "version": "1.0.0",
+  "engines": {
+    "npm": "4.2.x"
+  },
   "description": "resume",
   "main": "index.js",
   "dependencies": {},
@@ -8,7 +11,7 @@
     "gulp-load-plugins": "^1.5.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "bower install && gulp"
   },
   "author": "Mila",
   "license": "ISC"
