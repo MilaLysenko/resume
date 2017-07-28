@@ -17,7 +17,11 @@
   "dependencies": {
     "normalize.css": "*",
     "jquery": "2.*",
-    "bootstrap": "3.*"
+    "bootstrap": "3.*",
+    "angular": "1.*",
+    "angular-bootstrap": "2.*",
+    "angular-ui-router": "1.*",
+    "font-awesome": "*"
   },
   "keywords": [
     "resume"
