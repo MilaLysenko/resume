@@ -1,0 +1,23 @@
+{
+  "name": "resume",
+  "description": "resume",
+  "main": "index.html",
+  "authors": [
+    "Mila"
+  ],
+  "license": "ISC",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*",
+    "bootstrap": "3.*"
+  }
+}
