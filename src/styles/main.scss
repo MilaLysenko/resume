@@ -270,11 +270,10 @@ section:not(:first-child) {
                 height: 300px;
                 overflow: hidden;
                 background-color: $white;
-                background-image: url('../images/default-bg.png');
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
                 background-size: cover;
-                margin: 0 2px;
+                margin: 0 3px;
                 @media(max-width: 480px) {
                     width: 310px;
                     height: 240px;
