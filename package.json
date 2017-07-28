@@ -2,6 +2,7 @@
   "name": "resume",
   "version": "1.0.0",
   "engines": {
+    "node": "6.9.*",
     "npm": "4.2.x"
   },
   "description": "resume",
