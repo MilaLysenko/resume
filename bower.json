@@ -7,7 +7,6 @@
   ],
   "license": "ISC",
   "homepage": "index.html",
-  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
@@ -19,5 +18,8 @@
     "normalize.css": "*",
     "jquery": "2.*",
     "bootstrap": "3.*"
-  }
+  },
+  "keywords": [
+    "resume"
+  ]
 }
