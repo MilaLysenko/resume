@@ -30,7 +30,7 @@ angular
             scrollTo: function ( id ) {
                 $anchorScroll( id );
             },
-            portfolio: [
+           /* portfolio: [
                 {
                     bg: '../images/bullsy.png'
                 },
@@ -49,7 +49,7 @@ angular
                 {
                     bg: '../images/ex-rating.jpg'
                 }
-            ],
+            ],*/
             groups: [
                 {
                     title: 'CSS Preprocessors',
