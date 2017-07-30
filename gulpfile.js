@@ -137,7 +137,7 @@ gulp.task('default', ['build', 'webserver', 'watch']);
 
 gulp.task('serveprod', function() {
     connect.server({
-        root: "https://radiant-fjord-78131.herokuapp.com/",
+        root: "https://lysenko-resume.herokuapp.com/",
         port: process.env.PORT || 5000, // localhost:5000
         livereload: false
     });
