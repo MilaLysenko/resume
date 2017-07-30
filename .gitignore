@@ -38,7 +38,7 @@ build/Release
 # Dependency directories
 node_modules
 .bower
-build/bower_components
+
 test/temp
 dist
 .tmp
