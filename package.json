@@ -38,7 +38,7 @@
     "gulp-load-plugins": "^1.5.0"
   },
   "scripts": {
-    "start": "node index.js",
+    "start": "gulp",
     "postinstall": "bower install"
   },
   "author": "Mila",
