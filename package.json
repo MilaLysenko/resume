@@ -2,8 +2,7 @@
   "name": "resume",
   "version": "1.0.0",
   "engines": {
-    "node": ">=0.12.4",
-    "npm": "3.*"
+    "node": "6.9.5"
   },
   "description": "resume",
   "main": "index.js",
@@ -23,6 +22,7 @@
     "gulp-minify-html": "^0.1.8",
     "gulp-rev": "^2.0.1",
     "gulp-rigger": "*",
+    "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "*",
     "gulp-template": "^1.1.1",
     "gulp-uglify": "^1.0.1",
@@ -33,10 +33,7 @@
     "node-sass": "^4.5.3",
     "rimraf": "*"
   },
-  "devDependencies": {
-    "gulp-load-plugins": "^1.5.0",
-    "gulp-sass": "^2.3.2"
-  },
+  "devDependencies": {},
   "scripts": {
     "start": "node gulp",
     "postinstall": "bower install"
