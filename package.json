@@ -10,7 +10,7 @@
   "dependencies": {
     "bower": "*",
     "browser-sync": "*",
-    "ejs": "2.5.6",
+    "ejs": "latest",
     "express": "^4.15.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^1.0.1",
@@ -23,7 +23,6 @@
     "gulp-minify-html": "^0.1.8",
     "gulp-rev": "^2.0.1",
     "gulp-rigger": "*",
-    "gulp-sass": "^1.2.2",
     "gulp-sourcemaps": "*",
     "gulp-template": "^1.1.1",
     "gulp-uglify": "^1.0.1",

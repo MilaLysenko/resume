@@ -1,4 +1,3 @@
-/*
 // берём Express
 var express = require('express');
 
@@ -15,4 +14,4 @@ app.get('/', function(req, res) {
 // запускаем сервер на порту 8080
 app.listen(8080);
 // отправляем сообщение
-console.log('Сервер стартовал!');*/
+console.log('Сервер стартовал!');
