@@ -39,7 +39,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "postinstall": "bower install && gulp"
+    "postinstall": "bower install && gulp install"
   },
   "author": "Mila",
   "license": "ISC",
