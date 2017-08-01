@@ -14,7 +14,6 @@ var gulp = require('gulp'),
     browserSync = require("browser-sync"),
     reload = browserSync.reload;
 var plugins = require('gulp-load-plugins')();
-var promise = require('es6-promise').polyfill();
 var path = {
     build: {
         html: 'build/',
