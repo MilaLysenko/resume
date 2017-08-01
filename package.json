@@ -35,7 +35,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node gulp",
+    "start": "node index.js",
     "postinstall": "bower install"
   },
   "author": "Mila",
