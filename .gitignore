@@ -37,6 +37,8 @@ build/Release
 
 # Dependency directories
 node_modules
+/src
+/build/bower_components
 .bower
 
 test/temp
