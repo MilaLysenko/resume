@@ -19,6 +19,7 @@
     "jquery": "2.*",
     "bootstrap": "3.*",
     "angular": "1.*",
+    "angular-animate": "1.*",
     "angular-bootstrap": "2.*",
     "angular-ui-router": "1.*",
     "font-awesome": "*"

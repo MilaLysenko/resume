@@ -118,7 +118,7 @@
                         <p>Here is some of my work. You can learn more about it if click on one of them.</p>
                         <ul class="list-unstyled list-inline portfolio-items">
                             <li class="portfolio-item"
-                                data-ng-repeat="item in vm.portfolio"
+                                data-ng-repeat="item in vm.portfolio | limitTo:vm.limitPortfolio"
                                 data-ng-style="{'background-image' : 'url(' + item.banner + ')'}"
                             >
                                 <div class="back animated zoomIn">
@@ -127,9 +127,16 @@
                                             <strong>used technologies</strong>
                                         </h4>
                                         <ul class="techs-list list-unstyled text-left">
-                                            <li>{{ item.technologies }}</li>
+                                            <li>
+                                                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                                <span>Description of project</span>
+                                            </li>
+                                            <li>
+                                                <i class="fa fa-cogs" aria-hidden="true"></i>
+                                                <span>{{ item.technologies }}</span>
+                                            </li>
                                         </ul>
-                                        <button class="hvr-shutter-in-vertical my-btn" data-ng-click='window.open("{{ item.url }}", "_blank");'>Learn more</button>
+                                        <a class="hvr-shutter-in-vertical my-btn" data-ng-href="{{ item.url }}" target="_blank">Learn more</a>
                                     </div>
                                 </div>
                             </li>
@@ -419,56 +426,25 @@
                             to russian for people who prefer read on it.
                         </p>
                         <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="col-lg-4 col-md-4 col-sm-12" data-ng-repeat="item in [1,2,3]">
                                 <div class="blog-item">
                                     <div class="blog-picture"></div>
                                     <h4>
                                         <strong>Introduction to Webpack: Entry, Output, Loaders, and Plugins</strong>
                                     </h4>
                                     <div class="details">
-                                        <span tooltip-placement="top" uib-tooltip="Date of release"><i class="fa fa-calendar" aria-hidden="true"></i>25.05.17</span>
-                                        <span tooltip-placement="top" uib-tooltip="Watched"><i class="fa fa-eye" aria-hidden="true"></i>125</span>
-                                        <span tooltip-placement="top" uib-tooltip="Liked by"><i class="fa fa-heart" aria-hidden="true"></i>35</span>
-                                    </div>
-                                    <hr/>
-                                    <p class="description">
-                                        Front-end development has shifted to a modular approach, improving the encapsulation and structure of codebases. Tooling
-                                        became a critical part of any project, and right now there are a lot of possible choices.
-                                    </p>
-                                    <button class="hvr-shutter-in-vertical my-btn" onclick="window.location.href='#about-me';">read article</button>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                <div class="blog-item">
-                                    <div class="blog-picture"></div>
-                                    <h4>
-                                        <strong>Introduction to Webpack: Entry, Output, Loaders, and Plugins</strong>
-                                    </h4>
-                                    <div class="details">
-                                        <span tooltip-placement="top" uib-tooltip="Date of release"><i class="fa fa-calendar" aria-hidden="true"></i>25.05.17</span>
-                                        <span tooltip-placement="top" uib-tooltip="Watched"><i class="fa fa-eye" aria-hidden="true"></i>125</span>
-                                        <span tooltip-placement="top" uib-tooltip="Liked by"><i class="fa fa-heart" aria-hidden="true"></i>35</span>
-                                    </div>
-                                    <hr/>
-                                    <p class="description">
-                                        Front-end development has shifted to a modular approach, improving the encapsulation and structure of codebases. Tooling
-                                        became a critical part of any project, and right now there are a lot of possible choices.
-                                    </p>
-                                    <button class="hvr-shutter-in-vertical my-btn" onclick="window.location.href='#about-me';">read article</button>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-4 col-sm-12">
-                                <div class="blog-item">
-                                    <div class="blog-picture"></div>
-                                    <h4>
-                                        <strong>Introduction to Webpack: Entry, Output, Loaders, and Plugins</strong>
-                                    </h4>
-                                    <div class="details">
-                                        <span tooltip-placement="top" uib-tooltip="Date of release"><i class="fa fa-calendar" aria-hidden="true"></i>25.05.17</span>
-                                        <span tooltip-placement="top" uib-tooltip="Watched"><i class="fa fa-eye" aria-hidden="true"></i>125</span>
-                                        <span tooltip-placement="top" uib-tooltip="Liked by"><i class="fa fa-heart" aria-hidden="true"></i>35</span>
+                                        <span tooltip-placement="top" uib-tooltip="Publication Date">
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                            25.05.17
+                                        </span>
+                                        <span tooltip-placement="top" uib-tooltip="Watched">
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                            125
+                                        </span>
+                                        <span tooltip-placement="top" uib-tooltip="Liked by">
+                                            <i class="fa fa-heart" aria-hidden="true"></i>
+                                            35
+                                        </span>
                                     </div>
                                     <hr/>
                                     <p class="description">
