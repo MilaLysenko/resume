@@ -29,14 +29,14 @@ app.use( function ( req, res, next ) {
             console.log( "ERROR:", error );
         } );
 } );*/
-app.get('/portfolio', function (request, response) {
+app.get('/', function (request, response) {
     pg.connect(process.env.DATABASE_URL, function(err, client, done) {
         client.query('SELECT * FROM portfolio', function(err, result) {
             done();
             if (err)
             { console.error(err); response.send("Error " + err); }
             else
-            { response.render('/portfolio', {data: result.rows} ); }
+            { response.render('/', {data: result.rows} ); }
         });
     });
 });
