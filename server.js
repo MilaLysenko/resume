@@ -4,7 +4,7 @@ var bodyParser = require( 'body-parser' );
 //var pg = require('pg');
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
-var port = process.env.DATABASE_URL || 5000;
+var port = process.env.PORT || 5000;
 var pgp = require( "pg-promise" )( /*options*/ );
 var db = pgp( "postgres://postgres:root@localhost/resume" ); // "postgres://username:password@host:port/database"
 
