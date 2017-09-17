@@ -1,6 +1,7 @@
 var express = require( 'express' );
 var app = express();
 var bodyParser = require( 'body-parser' );
+var pg = require('pg');
 //var pg = require('pg');
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
@@ -17,7 +18,7 @@ app.use( function ( req, res, next ) {
     res.header( "Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept" );
     next();
 } );
-app.get( '/portfolio', function ( req, res ) {
+/*app.get( '/portfolio', function ( req, res ) {
     
     db.any( "SELECT * FROM portfolio" )
         .then( function ( data ) {
@@ -27,7 +28,18 @@ app.get( '/portfolio', function ( req, res ) {
         .catch( function ( error ) {
             console.log( "ERROR:", error );
         } );
-} );
+} );*/
+app.get('/db', function (request, response) {
+    pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+        client.query('SELECT * FROM portfolio', function(err, result) {
+            done();
+            if (err)
+            { console.error(err); response.send("Error " + err); }
+            else
+            { response.render('/db', {data: result.rows} ); }
+        });
+    });
+});
 
 
 // set the view engine to ejs

@@ -32,7 +32,8 @@
     "imagemin-pngquant": "*",
     "node-sass": "^4.5.3",
     "pg-promise": "^6.3.8",
-    "rimraf": "*"
+    "rimraf": "*",
+    "pg": "6.x"
   },
   "devDependencies": {},
   "scripts": {
