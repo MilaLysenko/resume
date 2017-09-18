@@ -7,7 +7,7 @@ var pg = require('pg');
 // process.env.PORT lets the port be set by Heroku
 var port = process.env.PORT || 5000;
 var pgp = require( "pg-promise" )( /*options*/ );
-var db = pgp( "postgres://postgres:root@localhost/resume" ); // "postgres://username:password@host:port/database"
+var db = pgp( "postgres://brsyopcumsbqji:905d77684e54f064acadaa62ff705e4f2c3e681afb67db940937c49f5e5e9efc@ec2-23-21-85-76.compute-1.amazonaws.com:5432/d74prkiu679g6m" ); // "postgres://username:password@host:port/database"
 
 app.use( bodyParser.urlencoded( { extended: true } ) );
 app.use( bodyParser.json() );
@@ -18,7 +18,7 @@ app.use( function ( req, res, next ) {
     res.header( "Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept" );
     next();
 } );
-/*app.get( '/portfolio', function ( req, res ) {
+app.get( '/portfolio', function ( req, res ) {
     
     db.any( "SELECT * FROM portfolio" )
         .then( function ( data ) {
@@ -28,8 +28,8 @@ app.use( function ( req, res, next ) {
         .catch( function ( error ) {
             console.log( "ERROR:", error );
         } );
-} );*/
-app.get('/db', function (request, response) {
+} );
+/*app.get('/db', function (request, response) {
     pg.connect(process.env.DATABASE_URL, function(err, client, done) {
         client.query('SELECT * FROM portfolio', function(err, result) {
             done();
@@ -39,7 +39,7 @@ app.get('/db', function (request, response) {
             { response.render('pages/db', {data: result.rows} ); }
         });
     });
-});
+});*/
 
 
 // set the view engine to ejs
