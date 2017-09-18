@@ -8,7 +8,7 @@ var pg = require('pg');
 var port = process.env.PORT || 5000;
 var pgp = require( "pg-promise" )( /*options*/ );
 var db = pgp( "postgres://postgres:root@localhost/resume" ); // "postgres://username:password@host:port/database"
-var dbUrl = process.env.DATABASE_URL;
+
 app.use( bodyParser.urlencoded( { extended: true } ) );
 app.use( bodyParser.json() );
 
@@ -18,9 +18,9 @@ app.use( function ( req, res, next ) {
     res.header( "Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept" );
     next();
 } );
-app.get( '/portfolio', function ( req, res ) {
+/*app.get( '/portfolio', function ( req, res ) {
     
-    dbUrl.any( "SELECT * FROM portfolio" )
+    db.any( "SELECT * FROM portfolio" )
         .then( function ( data ) {
             res.send(data);
             //console.log( "DATA:", data );
@@ -28,18 +28,18 @@ app.get( '/portfolio', function ( req, res ) {
         .catch( function ( error ) {
             console.log( "ERROR:", error );
         } );
-} );
-/*app.get('/resume', function (request, response) {
+} );*/
+app.get('/db', function (request, response) {
     pg.connect(process.env.DATABASE_URL, function(err, client, done) {
         client.query('SELECT * FROM portfolio', function(err, result) {
             done();
             if (err)
             { console.error(err); response.send("Error " + err); }
             else
-            { response.render('/resume', {data: result.rows} ); }
+            { response.render('pages/db', {data: result.rows} ); }
         });
     });
-});*/
+});
 
 
 // set the view engine to ejs
