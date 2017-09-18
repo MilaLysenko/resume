@@ -18,7 +18,7 @@ app.use( function ( req, res, next ) {
     res.header( "Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept" );
     next();
 } );
-/*app.get( '/portfolio', function ( req, res ) {
+app.get( '/portfolio', function ( req, res ) {
     
     db.any( "SELECT * FROM portfolio" )
         .then( function ( data ) {
@@ -28,18 +28,18 @@ app.use( function ( req, res, next ) {
         .catch( function ( error ) {
             console.log( "ERROR:", error );
         } );
-} );*/
-app.get('/portfolio', function (request, response) {
+} );
+/*app.get('/resume', function (request, response) {
     pg.connect(process.env.DATABASE_URL, function(err, client, done) {
         client.query('SELECT * FROM portfolio', function(err, result) {
             done();
             if (err)
             { console.error(err); response.send("Error " + err); }
             else
-            { response.render('/portfolio', {data: result.rows} ); }
+            { response.render('/resume', {data: result.rows} ); }
         });
     });
-});
+});*/
 
 
 // set the view engine to ejs
