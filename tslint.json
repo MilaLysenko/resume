@@ -1,0 +1,52 @@
+{
+  "extends": "tslint-config-valorsoft",
+  "rules": {
+
+    "angular-whitespace": false,
+    "banana-in-box": false,
+    "templates-no-negated-async": false,
+    "directive-selector": false,
+    "component-selector": false,
+    "use-input-property-decorator": false,
+    "use-output-property-decorator": false,
+    "use-host-property-decorator": false,
+    "use-view-encapsulation": false,
+    "no-attribute-parameter-decorator": false,
+    "no-unnecessary-type-assertion": false,
+    "no-input-rename": false,
+    "no-output-rename": false,
+    "no-forward-ref": false,
+    "use-life-cycle-interface": false,
+    "use-pipe-transform-interface": false,
+    "pipe-naming": false,
+    "component-class-suffix": false,
+    "directive-class-suffix": false,
+    "templates-use-public": false,
+    "no-access-missing-member": false,
+    "invoke-injectable": false,
+    "template-to-ng-template": false,
+    "contextual-life-cycle": false,
+    "decorator-not-allowed": false,
+    "typeof-compare": false,
+    "space-before-function-paren": [false],
+
+    "no-any": false,
+    "no-empty": false,
+    "no-console": [false],
+    "no-magic-numbers": [false],
+
+    "max-line-length": [180],
+    "max-file-line-count": [false],
+
+    "switch-default": false,
+    "prefer-conditional-expression": false,
+    "import-blacklist": false,
+    "no-floating-promises": false,
+    "no-inferred-empty-object-type": false,
+    "no-unbound-method": false,
+    "no-void-expression": false,
+    "no-implicit-dependencies": false,
+    "prefer-readonly": false,
+    "newline-per-chained-call": false
+  }
+}
