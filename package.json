@@ -30,7 +30,7 @@
     "gulp-util": "^3.0.1",
     "gulp-watch": "*",
     "imagemin-pngquant": "*",
-    "node-sass": "^4.5.3",
+    "node-sass": "^7.0.0",
     "pg-promise": "^6.3.8",
     "rimraf": "*",
     "pg": "6.x"
